@@ -1,0 +1,30 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Inițial, imaginea are o bordură invizibilă */
+        #myImage {
+            border: 0;
+            transition: border 0.5s;
+        }
+        
+        /* Când modul "on" este activat, adaugă o bordură */
+        #myImage.on {
+            border: 2px solid #3498db;
+        }
+            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatie cu Bordura pe Figura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="toggleButton">Activează Modul On</button>
+    <img id="myImage" src="On_button.png" alt="Imagine">
+    <script src="script.js"></script>
+</body>
+</html>
+ 
