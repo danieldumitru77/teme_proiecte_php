@@ -128,8 +128,42 @@ if ($conn->query($sql) === TRUE) {
   echo "Eroare: " . $conn->error;
 }
 
+//READ ... CRUD
+
+$sql = "SELECT * FROM Studenti";
+$result = $conn->query($sql);
+
+if($result->num_rows >0){
+  while ($row = $result->fetch_assoc()){
+    echo "<br>" ."ID:" . $row["id"] . "- Nume: " . $row["first_name"] . " " .$row["last_name"] . " - Email " . $row["email"] . "<br>";
+  }
+}else{
+  echo "Niciun student gasit";
+}
+
+//UPDATE
+$sql = "UPDATE studenti SET email ='marianpop77@hahu.com' WHERE id=1";
+
+if ($conn->query($sql) === TRUE) {
+  echo "UPDATE SUCCES";
+} else {
+  echo "Eroare: " . $conn->error;
+}
 
 
+//DELETE
+
+$sql = "DELETE FROM Studenti WHERE id=1";
+
+if ($conn->query($sql) === TRUE) {
+  echo "DELETE succes";
+} else {
+  echo "Eroare: " . $conn->error;
+}
+
+
+
+$conn->close();
 
 }
 
