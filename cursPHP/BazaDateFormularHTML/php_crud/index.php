@@ -49,7 +49,7 @@
                     <input type="text" name="email" id="email" autocomplete="off" required>
                 </div>
 
-                <div class="field input">
+                <div class="field ">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" autocomplete="off" required>
                 </div>
@@ -60,6 +60,9 @@
                 </div>
                 <div class="links">
                     Don't have account? <a href="register.php">Sign Up Now</a>
+                </div>
+                <div class="links">
+                     <a href="forgot-password.php">Forgot password ?</a>
                 </div>
             </form>
         </div>

@@ -10,6 +10,6 @@
         die("Conectiune esuata". $conn->connect_error);
     }
     
-   
+    return $conn;
 
 ?>
