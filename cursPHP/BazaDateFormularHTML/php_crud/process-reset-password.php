@@ -20,9 +20,11 @@ $result = $stmt->get_result();
 
 $user = $result->fetch_assoc();
 
+var_dump($_POST);
 
 
-
+$password = $_POST["password"];
+echo $password;
 
 $sql = "UPDATE users_data
         SET password = ?,
@@ -30,7 +32,9 @@ $sql = "UPDATE users_data
             reset_token_expire_at = NULL
         WHERE id = ?";
 
-$stmt = $mysqli->prepare($sql);
+
+
+$stmt = $conn->prepare($sql);
 
 $stmt->bind_param("ss", $password, $user["id"]);
 
